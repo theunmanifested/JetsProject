@@ -6,14 +6,14 @@ public class FighterJet extends Jet implements CombatReady{
 		super();
 	}
 	
-	public FighterJet(String model, double speed, int range, long price) {
-		super(model, speed, range, price);
-		// TODO Auto-generated constructor stub
+	public FighterJet(String model, double speed, int range, long price, String type) {
+		super(model, speed, range, price, type);		
 	}
 
 	@Override
 	public void flightAttack() {
-		// TODO Auto-generated method stub
+		// Activated when user selects DogFight
+		System.out.println("DOGFIGHT!!!!");
 		
 	}
 	

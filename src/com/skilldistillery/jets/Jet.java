@@ -1,6 +1,3 @@
-// Jets by Walter S. Valdez at https://github.com/theunmanifested/JetsProject 
-// Wk3, SD28, documentation = https://github.com/SkillDistillery/SD28/blob/master/java2/Jets/README.md 
-// 
 package com.skilldistillery.jets;
 
 public abstract class Jet {
@@ -8,16 +5,18 @@ public abstract class Jet {
 	private double speed; 	// mph, but can also be mach
 	private int range; 		// nm, nautical miles
 	private long price;
+	private String type; 	// facilitates edits to jets 
 	
 	
 	
 	// constructors can be called by an implementation of this abstract class
-	public Jet(String model, double speed, int range, long price) {
+	public Jet(String model, double speed, int range, long price, String type) {
 		super();
 		this.model = model;
 		this.speed = speed;
 		this.range = range;
 		this.price = price;
+		this.type = type;
 	}
 	
 	// methods shared by all descendants
@@ -34,19 +33,28 @@ public abstract class Jet {
         int p2 = seconds / 60;
         int p3 = p2 % 60;
         p2 = p2 / 60;
-        System.out.println("Flight Time Left (hrs:mins:sec): " + p2 + ":" + p3 + ":" + p1 + "\n");
         System.out.println(toString());
+        System.out.println("Flight Time Left (hrs:mins:sec): " + p2 + ":" + p3 + ":" + p1 + "\n");
 		
         
 	}
 
 	@Override
 	public String toString() {
-		return "Jet's Model = " + model + ", Speed = " + speed + ", Range = " + range + ", Price = " + price;
+		return "Jet [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + ", type=" + type
+				+ "]";
 	}
 
 	public String getModel() {
 		return model;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public double getSpeed() {
