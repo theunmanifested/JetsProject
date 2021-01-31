@@ -1,0 +1,5 @@
+Blackburn Buccanneer, 670.00, 2000, 20000000
+English Electra Canberra, 580.00, 3380, 45000000
+Vickers Valiant, 567.00, 4500, 55000000
+Eurofighter Typhoon, 2125.00, 2900, 120000000
+Panavia Tornado, 2400.00, 3890, 250000000
